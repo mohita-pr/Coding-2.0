@@ -22,9 +22,7 @@ class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         nums = sorted(nums)
         length = len(nums)
-        for i in range(0,ceil(length/2)):
-            if nums[i] == nums[i+floor(length/2)]:
-                return nums[i]
+        return nums[length/2]
             
 
 #Approach 3 - Moore's Voting Algorithm O(n)
